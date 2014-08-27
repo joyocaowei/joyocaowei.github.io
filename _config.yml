@@ -18,8 +18,8 @@ author :
   name : Cao, Wei
   email : joyocaowei at gmail.com
   github : joyocaowei
-  twitter : 
-  feedburner : 
+  twitter : joyocaowei 
+  feedburner : joyocaowei 
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -119,7 +119,7 @@ JB :
   # Set 'provider' to false to turn sharing off globally.
   #
   sharing :
-    provider : custom
+    provider : false
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
