@@ -9,6 +9,8 @@ tags:
 ---
 
 **工作或者学习 - shell命令记录（part1）**
+--------
+
 
 ####  tee - replicate the standard output
 ```  
@@ -19,7 +21,8 @@ pwd | tee pwd.txt | ls | cat -n
 
  pwd.txt的内容就是执行pwd的结果： 
  >/home/caowei/code  
-
+ 
+<!--more-->  
 #### sleep.sh  
 ```  
 #!/bin/bash  
