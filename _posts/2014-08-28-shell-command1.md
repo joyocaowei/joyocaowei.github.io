@@ -8,7 +8,7 @@ tags:
 - shell
 ---
 
-**工作或者学习 - shell命令记录（part1）**
+**工作或者学习 - shell命令记录**
 --------
 
 
@@ -81,5 +81,58 @@ find . -type f -exec du -k {} \; | sort -nrk 1 | head
 >xargs命令把从stdin接受的数据重新格式化，然后再将其作为参数提供给其他命令。 
 
 
-#### bc  
-   `echo $number%2 | bc` **可以用来判断奇偶数**  
+#### bc
+`echo $number%2 | bc` **可以用来判断奇偶数**
+`echo "scale=5;e(1)" | bc -l` **具体的函数可可以参考手册 man bc**
+>result: 2.71828
+
+`echo "scale=2;34/3" | bc`
+>result: 11.33
+
+#### send e-mail
+##### 方法一
+`cat test.txt`  
+> To: A@XXXXX.com  
+From: B@XXXXX.com  
+Cc: C@XXXXXX.com  
+Subject: Test E-mail  
+>  
+>This is a test e-mail  
+.  
+
+**then run command:**  
+`sendmail -t < test.txt`  
+
+##### 方法二  
+`(cat mail.txt; uuencode $1 $1) | mailx -s "$subject" $address`  
+>发送单个附件  
+
+##### 方法三 - 发送多个附件
+>uuencode r1.tar.gz r1.tar.gz > /tmp/out.mail  
+ uuencode r2.tar.gz r3.tar.gz >> /tmp/out.mail  
+uuencode r3.tar.gz r3.tar.gz >> /tmp/out.mail  
+cat email.txt >> /tmp/out.mail  
+mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail  
+
+#### 一些命令行
+`cat file1 file2 | sort | uniq -d`
+>两个文件的交集
+
+`sort -t"|" +3 -4 +2 -3 +5 -6n file `
+>对多个字段进行排序   
+`-t"|"` 对文件以 | 作为分列符号  
+`+3 -4` 对第四个字段作为关键字排序  
+`+2 -3` 同上，对第三个关键字进行排序  
+`+5 -6n` 对第六列进行数据排序  
+最后的内容相当于第四列作为第一优先级排序，之后是第三列，最后是第六列。
+
+`awk '!a[$0]++' filename`
+>去除文件的重复行，在某些系统上可能要使用nawk
+
+------
+#### 学习与参考
+[Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)  
+  
+[The Linux Programming Interface](http://man7.org/tlpi/)  
+  
+[Advanced Programming in the UNIX Environment, Third Edition](http://www.apuebook.com/apue3e.html)  
