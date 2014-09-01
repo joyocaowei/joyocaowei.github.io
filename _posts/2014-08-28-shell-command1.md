@@ -82,16 +82,17 @@ find . -type f -exec du -k {} \; | sort -nrk 1 | head
 
 
 #### bc
-`echo $number%2 | bc` **可以用来判断奇偶数**  
+`echo $number%2 | bc`  
+>**可以用来判断奇偶数**  
 
-`echo "scale=5;e(1)" | bc -l` **具体的函数可可以参考手册 man bc**
+`echo "scale=5;e(1)" | bc -l` **具体的函数可可以参考手册 man bc**  
 >result: 2.71828
 
-`echo "scale=2;34/3" | bc`
->result: 11.33
+`echo "scale=2;34/3" | bc`  
+>result: 11.33  
 
-#### send e-mail
-##### 方法一
+#### send e-mail  
+##### 方法一  
 `cat test.txt`  
 > To: A@XXXXX.com  
 From: B@XXXXX.com  
