@@ -83,6 +83,7 @@ find . -type f -exec du -k {} \; | sort -nrk 1 | head
 
 #### bc
 `echo $number%2 | bc` **可以用来判断奇偶数**  
+
 `echo "scale=5;e(1)" | bc -l` **具体的函数可可以参考手册 man bc**
 >result: 2.71828
 
