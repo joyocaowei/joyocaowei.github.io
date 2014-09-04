@@ -138,3 +138,5 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 [The Linux Programming Interface](http://man7.org/tlpi/)  
   
 [Advanced Programming in the UNIX Environment, Third Edition](http://www.apuebook.com/apue3e.html)  
+
+[The AWK Programming Language](http://plan9.bell-labs.com/cm/cs/awkbook/)
