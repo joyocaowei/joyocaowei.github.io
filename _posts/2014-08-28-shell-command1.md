@@ -1,16 +1,10 @@
 ---
-title: shell命令-part1
-author: joyocaowei
+title: 基本的shell命令使用 
 layout: post
-permalink:  /shell-command1/
-tags:
-- Linux
-- shell
+description: shell的简单使用
+keywords: linux, shell
+categories: programming
 ---
-
-**工作或者学习 - shell命令记录**
---------
-
 
 ####  tee - replicate the standard output
 ```  
@@ -132,7 +126,8 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 >去除文件的重复行，在某些系统上可能要使用nawk
 
 ------
-#### 学习与参考
+
+#### 学习
 [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)  
   
 [The Linux Programming Interface](http://man7.org/tlpi/)  
