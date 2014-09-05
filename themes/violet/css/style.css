@@ -483,7 +483,7 @@ a:hover {
 .main-article blockquote {
     padding: 20px 20px 0 20px;
     margin: 20px 0 24px;
-    border-right: 3px solid #0088cc;
+    border-left: 3px solid #0088cc;
     border-radius: 0 3px 3px 0;
     text-align: left;
     color: #8d8d8d;
