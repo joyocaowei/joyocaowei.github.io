@@ -10,8 +10,8 @@ safe: false
 title: 雨落空林 
 subTitle: Be Happy.
 description: 记录生活的点滴
-#url: http://joyocaowei.github.io
-url: http://localhost:4000
+url: http://joyocaowei.github.io
+#url: http://localhost:4000
 feed: /atom.xml
 
 #菜单配置
