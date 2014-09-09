@@ -6,6 +6,22 @@ keywords: GitHub, Jekyll, reading, programming, life
 isArchive: true
 ---
 
+<nav class="nav" id="archives-nav">
+	<ul class="archives-nav-list align-center">
+		{% for item in site.archives %}
+			{% assign active = nil %}
+			{% assign default_archive = 'sort_by_pubdate' %}
+			{% if item.id == default_archive %}
+				{% assign active = 'archives-nav-item-active' %}
+			{% endif %}
+			<li class="archives-nav-item {{ active }}">
+				<a href="javascript:;">
+					{{ item.text }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</nav>
 <article class="main-article main-article-page">
 	<div class="violet-post align-center">
 		<div class="main-article-content">
@@ -28,6 +44,20 @@ isArchive: true
 					</li>
 					{% endfor %}
 				</ul>
+			</div>
+			<div id="category_section" class="hide">
+				{% for cat in site.categories %}
+					<h3>{{ cat[0] }}</h3>
+					<ul class="archives-article fn-clear">
+					{% for p in site.posts %}
+						{% if p.categories contains cat[0] %}
+							<li>
+								<span>{{ p.date | date_to_utc | date: '%Y-%m-%d' }}</span>
+								<a href="{{site.url}}{{ p.url }}">{{ p.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
 			</div>
 		</div>
 	</div>
