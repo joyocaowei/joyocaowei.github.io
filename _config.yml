@@ -1,6 +1,7 @@
 #markdown: rdiscount
 #pygments: true
-markdown: kramdown
+#markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 plugins: ./_plugins
 paginate: 8
