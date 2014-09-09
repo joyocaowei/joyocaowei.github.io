@@ -10,11 +10,12 @@ redcarpet:
     - fenced_code_blocks
     - with_toc_data
     - tables
-#highlighter: pygments
-pygments: true
+highlighter: pygments
+#pygments: true
 plugins: ./_plugins
 paginate: 8
-safe: true
+#safe: true
+safe: false
 
 #站点基础配置
 title: 雨落空林 
