@@ -2,10 +2,18 @@
 #pygments: true
 #markdown: kramdown
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
+    - with_toc_data
+    - tables
 highlighter: pygments
 plugins: ./_plugins
 paginate: 8
-
 safe: false
 
 #站点基础配置
