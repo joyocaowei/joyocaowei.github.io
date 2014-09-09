@@ -1,17 +1,28 @@
-markdown: rdiscount
+#markdown: rdiscount
+#markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
+    - with_toc_data
+    - tables
+highlighter: pygments
 #pygments: true
-highlighter: true
 plugins: ./_plugins
 paginate: 8
-
+#safe: true
 safe: false
 
 #站点基础配置
 title: 雨落空林 
 subTitle: Be Happy.
 description: 记录生活的点滴
-#url: http://joyocaowei.github.io
-url: http://localhost:4000
+url: http://joyocaowei.github.io
+#url: http://localhost:4000
 feed: /atom.xml
 
 #菜单配置
@@ -62,6 +73,7 @@ follow:
 #作者信息
 author:
   name: joyocaowei
+  email: joyocaowei@gmail.com
   link: http://joyocaowei.github.io/contact.html
   img: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
 

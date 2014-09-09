@@ -18,7 +18,7 @@ pwd | tee pwd.txt | ls | cat -n
  
 <!--more-->  
 #### sleep.sh  
-```  
+``` bash
 #!/bin/bash  
 #Filename: sleep.sh  
 echo -n Count:  
@@ -39,7 +39,7 @@ echo -n Count:
 ```  
  
 #### FTP  
-```  
+``` bash
 # "-n"  Restrains ftp from attempting "auto-login" upon initial connection.  
 # "-i"  Turns off interactive prompting during multiple file transfers.  
 # "-v"  Verbose option forces ftp to show all responses from the remote server, as well as report on data transfer statistics.  
@@ -58,20 +58,21 @@ EOF`
 echo "FTP Results: $ftpresults"  
 ```  
 #### find及其组合命令  
-- Finding the 10 largest size files from a given directory  
-```  
+- Finding the 10 largest size files from a given directory
+
+``` bash
 find . -type f -exec du -k {} \; | sort -nrk 1 | head  
 ```  
  >{}是一个特殊的字符串，与-exec结合使用。对于每一个匹配的文件，{}都会被替换成相应的文件名。 
 
 - 清空当前目录下所有文件的内容，但不删除文件  
    `find . -type f -exec cp /dev/null {} \;`  
-   
+
 - 统计当前目录中所有txt文件的行数  
   `find . -type f -name "*.txt" | xargs wc -l`  
   
 - 查找当前目录及其子目录下包括`About`字符的文件  
-`find . -type f | xargs grep -n About`  
+`find . -type f | xargs grep -n About`
 >xargs命令把从stdin接受的数据重新格式化，然后再将其作为参数提供给其他命令。 
 
 
