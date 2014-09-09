@@ -1,5 +1,4 @@
 #markdown: rdiscount
-#pygments: true
 #markdown: kramdown
 markdown: redcarpet
 redcarpet:
@@ -11,10 +10,11 @@ redcarpet:
     - fenced_code_blocks
     - with_toc_data
     - tables
-highlighter: pygments
+#highlighter: pygments
+pygments: true
 plugins: ./_plugins
 paginate: 8
-safe: false
+safe: true
 
 #站点基础配置
 title: 雨落空林 
