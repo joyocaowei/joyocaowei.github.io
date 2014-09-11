@@ -67,8 +67,8 @@ follow:
 #    url: http://www.zhanxin.info
 #  - class: fa-twitter
 #    url: http://www.zhanxin.info
-  - class: fa-rss
-    url: http://joyocaowei.github.io
+#  - class: fa-rss
+#    url: http://joyocaowei.github.io
 
 #作者信息
 author:

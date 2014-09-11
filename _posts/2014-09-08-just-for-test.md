@@ -61,3 +61,39 @@ int main()
     return 0;  
 }  
 ```
+
+### 测试表格显示问题
+
+**Markdown Extra** has a special syntax for tables:
+
+Item     | Value
+-------- | ---
+Computer | $1600
+Phone    | $12
+Pipe     | $1
+
+You can specify column alignment with one or two colons:
+
+| Item     | Value | Qty   |
+| :------- | ----: | :---: |
+| Computer | $1600 |  5    |
+| Phone    | $12   |  12   |
+| Pipe     | $1    |  234  |
+
+
+#### 测试图片显示问题
+
+![pic1](/images/forkme.png)
+
+
+#### Table of contents
+
+You can insert a table of contents using the marker `[TOC]`:
+
+[TOC]
+
+也许这个是没有效果的？
+
+--------
+
+

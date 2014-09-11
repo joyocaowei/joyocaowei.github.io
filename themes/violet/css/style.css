@@ -15,6 +15,14 @@ html {
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     margin:0;padding:0;
 }
+hr{
+    height:1px;
+    background-color:#0066cc;
+    border:1px solid #0066cc;
+} 
+
+@-moz-document url-prefix(){ hr{height:1px;}} /* for firefox */
+
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display:block;
 }
@@ -22,7 +30,7 @@ audio,canvas,video {
     display: inline-block;*display: inline;*zoom: 1;
 }
 body,button,input,select,textarea {
-    font: 14px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+    font: 14px/1.5 tahoma,arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",\5b8b\4f53,sans-serif;
 }
 input,select,textarea {
     font-size:100%;
@@ -603,7 +611,7 @@ float: left;
 .main-article pre {
     margin: 30px 0px 30px 0px;
     padding: 13px 20px;
-    background-color: #F4F4F6;
+    background-color: #ffffcc;
     clear: both;
     color: #22272A;
     overflow: auto;
@@ -613,7 +621,7 @@ float: left;
             border-radius: 2px;
 }
 .main-article code {
-    background: #f6f6f6;
+    background: #ffffcc;
     border: 1px solid #d0d0d0;
     border-radius: 3px 3px;
     line-height: inherit;
