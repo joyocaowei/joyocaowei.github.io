@@ -3,6 +3,7 @@
  * @author: zhanxin.info@gmail.com
  * @create: 2013.10
  * @desc:   这里是 violet 新的样式
+ * @change: 2014.09
  */
 /* =Reset
 --------------------------------------*/
@@ -37,6 +38,7 @@ input,select,textarea {
 }
 table {
     border-collapse:collapse;border-spacing:0;
+    table-layout:fixed;
 }
 th {
     text-align:inherit;
@@ -84,7 +86,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
+    /* font-family: monospace, serif; */
     font-size: 1em;
 }
 
