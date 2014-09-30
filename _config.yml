@@ -10,6 +10,7 @@ redcarpet:
     - fenced_code_blocks
     - with_toc_data
     - tables
+    - underline
 highlighter: pygments
 #pygments: true
 plugins: ./_plugins
