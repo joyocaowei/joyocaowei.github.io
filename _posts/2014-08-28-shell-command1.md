@@ -89,6 +89,17 @@ EOF`
 `find . -type f | xargs grep -n About`
 >xargs命令把从stdin接受的数据重新格式化，然后再将其作为参数提供给其他命令。
 
+#### uniq
+>By default, `uniq` prints the uniq lines in a sorted file. To return all duplicate lines, the input must first be sorted. for non-sorted data, an alternative command is `sort -u`
+
+`uniq -u`
+>--unique, print only unique lines
+
+`uniq -d`
+>--repeated, print only duplicate lines
+
+`uniq -c`
+>--count, print the number of times each line occurred along with line
 
 #### bc
 `echo $number%2 | bc`
@@ -140,13 +151,14 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 `awk '!a[$0]++' filename`
 >去除文件的重复行，在某些系统上可能要使用nawk
 
+`sed -n '1p' filename`
+>输出文件的第一行内容
+
 ------
 
 #### 学习
 [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)
 
 [The Linux Programming Interface](http://man7.org/tlpi/)
-
-[Advanced Programming in the UNIX Environment, Third Edition](http://www.apuebook.com/apue3e.html)
 
 [The AWK Programming Language](http://plan9.bell-labs.com/cm/cs/awkbook/)
