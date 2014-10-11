@@ -9,17 +9,33 @@ categories: configuration
 #### bash终端上常用的快捷键
 
 `Ctrl+a` 移动到行首
+
 `Ctrl+e` 移动到行尾
+
 `Ctrl+r` 向后搜索历史命令（使用`Ctrl+g`退出搜索）
+
 `Ctrl+h` 退格删除一个字符，相当于`Backspace`键
+
 `Ctrl+u` 从当前光标删除到行首
+
 `Ctrl+k` 从当前光标删除到行尾
+
 `Ctrl+l` 清屏
+
 `Ctrl+f` 光标前移/一个字符
+
 `Ctrl+b` 光标后移一个字符
+
 `Ctrl+d` 删除一个字符
+
+`Alt+f`  向前移动一个单词
+
+`Alt+b`  想后移动一个单词
+
 `Ctrl+p` 上一条命令
+
 `Ctrl+n` 下一条命令
+
 `Ctrl+y` 粘贴刚删除的内容
 
 #### 个性化提示符
