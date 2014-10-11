@@ -38,3 +38,5 @@ PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\w]\[\e[
 [终端快捷键列表](http://tuhaihe.com/2013/06/20/bash-shortcuts.html)
 
 [PS1 generator](http://bashrcgenerator.com/)
+
+[Bash Manual - command line editing](https://www.gnu.org/software/bash/manual/bashref.html#Command-Line-Editing)
