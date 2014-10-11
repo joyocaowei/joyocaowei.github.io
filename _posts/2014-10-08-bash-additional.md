@@ -30,7 +30,7 @@ categories: configuration
 
 `Alt+f`  向前移动一个单词
 
-`Alt+b`  想后移动一个单词
+`Alt+b`  向后移动一个单词
 
 `Ctrl+p` 上一条命令
 
