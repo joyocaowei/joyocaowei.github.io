@@ -83,16 +83,24 @@ You can specify column alignment with one or two colons:
 
 #### 测试图片显示问题
 
+1. 存储在github上的图片
+
 ![pic1](/images/forkme.png)
+
+2. 在Imgur上的图片
+ 
+![Imgur](http://i.imgur.com/JpVp10u.jpg "Box of blue eyed kittens")
+
+顺便推荐一下Imgur这个网站，作为图床还是不错的，不过免费帐户有时间限制。国内的话可以考虑七牛云存储。
 
 
 #### Table of contents
 
-You can insert a table of contents using the marker `[TOC]`:
+Test insert a table of contents using the marker `[TOC]`:
 
 [TOC]
 
-也许这个是没有效果的？
+添加此功能有点麻烦，暂时不需要，作为TODO list的一部分。
 
 --------
 
