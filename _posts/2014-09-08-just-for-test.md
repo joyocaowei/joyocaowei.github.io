@@ -83,15 +83,15 @@ You can specify column alignment with one or two colons:
 
 #### 测试图片显示问题
 
-1. 存储在github上的图片
+存储在github上的图片
 
 ![pic1](/images/forkme.png)
 
-2. 在Imgur上的图片
+在Imgur上的图片
  
 ![Imgur](http://i.imgur.com/JpVp10u.jpg "Box of blue eyed kittens")
 
-顺便推荐一下Imgur这个网站，作为图床还是不错的，不过免费帐户有时间限制。国内的话可以考虑七牛云存储。
+顺便推荐一下Imgur这个网站，作为图床还是不错的，不过免费帐户有时间限制。还可以考虑七牛和[drp.io](http://drp.io/)。
 
 
 #### Table of contents
