@@ -93,6 +93,10 @@ You can specify column alignment with one or two colons:
 
 顺便推荐一下Imgur这个网站，作为图床还是不错的，不过免费帐户有时间限制。还可以考虑七牛和[drp.io](http://drp.io/)。
 
+在http://pic.conn.cc/的图片
+
+![Tu.conn.cc](http://dn-tucdn.qbox.me/Vy.png/w.jpg "bash terminal")
+
 
 #### Table of contents
 
