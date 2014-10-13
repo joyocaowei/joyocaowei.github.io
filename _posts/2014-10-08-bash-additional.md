@@ -48,7 +48,7 @@ export PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\
 
 效果如下：
 
-![bash-terminal](https://img.bi/#/x7mIjQb!K0cBQOwUt8S4UPLkgSIIFXe1MKnXnaZUBpC9z44T)
+![](https://img.bi/#/x7mIjQb!K0cBQOwUt8S4UPLkgSIIFXe1MKnXnaZUBpC9z44T "bash terminal")
 
 如果你想自定义提示符，可以使用**[PS1 generator](http://bashrcgenerator.com/)**自己定制。
 
