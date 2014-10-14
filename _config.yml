@@ -33,7 +33,7 @@ nav:
   - text: 文章归档
     url: /archives.html
   - text: 关于我 
-    url: /contact.html
+    url: /life/2014/10/14/About-Me.html
 
 #归档类型
 archives:
