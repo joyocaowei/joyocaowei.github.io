@@ -154,7 +154,9 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 `sed -n '1p' filename`
 >输出文件的第一行内容
 
-------
+`set`
+>`set` 命令除了设置环境变量之外，还会将其他在 `shell` 内的变量通通显示出来，比如使用 `set | more` 查看
+
 
 #### 学习
 [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)
