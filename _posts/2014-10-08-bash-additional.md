@@ -52,8 +52,31 @@ export PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\
 
 如果你想自定义提示符，可以使用**[PS1 generator](http://bashrcgenerator.com/)**自己定制。
 
+顺便解释一下PS1变量中提示符各项含义(参考[6.9 Controlling the Prompt](http://www.gnu.org/software/bash/manual/bashref.html#Printing-a-Prompt)):
 
-#### More
+**\d** ：代表日期，格式为weekday month date，例如："Mon Aug 1"
+
+**\h** ：仅取主机的第一个名字
+
+**\t** ：显示时间为24小时格式，如：HH：MM：SS
+
+**\T** ：显示时间为12小时格式
+
+**\A** ：显示时间为24小时格式：HH：MM
+
+**\u** ：当前用户的账号名称
+
+**\v** ：BASH的版本信息
+
+**\w** ：完整的工作目录名称。家目录会以 ~代替
+
+**\W** ：利用basename取得工作目录名称，所以只会列出最后一个目录
+
+**\#** ：下达的第几个命令
+
+**\$** ：提示字符，如果是root时，提示符为：# ，普通用户则为：$
+
+#### More Resources
 
 [终端快捷键列表](http://tuhaihe.com/2013/06/20/bash-shortcuts.html)
 
