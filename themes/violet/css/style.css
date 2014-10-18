@@ -669,11 +669,12 @@ float: left;
 }
 .main-article img {
     margin: 20px 0 24px 0;
-    background: #f0f0f0;
+  /*background: #f0f0f0;
     padding: 4px 4px;
-    border: 1px solid #a8a8a8;
+    border: 1px solid #a8a8a8;*/
     display: block;
     opacity: 0.8;
+    max-width: 100%;
 }
 .main-article img:hover {
     opacity: 1;
