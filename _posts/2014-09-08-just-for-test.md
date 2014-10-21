@@ -10,7 +10,8 @@ categories: programming
 
 You can render *LaTeX* mathematical expressions using **MathJax**, as on [math.stackexchange.com](http://math.stackexchange.com/):
 
-用`\(`和`\)`括起来的是行内公式: \(E=mc^2\)
+用`\(`和`\)`括起来的是行内公式: \\( E=mc^2 \\)
+这是另一个行内公式测试： $ E=mc^2 $
 用`$$`和`$$`括起的是行公式
 
 The *Gamma function* satisfying $$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$ is via the Euler integral
