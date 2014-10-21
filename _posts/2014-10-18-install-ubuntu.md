@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 安装Ubuntu 14.04 遇囧记事
-description: 安装ubunt14时，老安装不上，原来是我的u盘有问题，人品到极点。
+description: 安装ubunt14时，老安装不上，原来是我的u盘有问题，人品差到极点。
 keywords: linux
 categories: life
 ---
@@ -10,16 +10,16 @@ categories: life
 安装的过程中真是波折不断，倒不是说安装很难，而是我的两个U盘想吃错了药似的，一点都不给面子。
 
 #### 准备工作
-> - 一个大于2G的U盘
-> - Ubuntu14.04的镜像（根据cpu选择32位或者64位）
-> - [UUI制作工具][1]
+ - 一个大于2G的U盘
+ - Ubuntu14.04的镜像（根据cpu选择32位或者64位）
+ - [UUI制作工具][1]
 
 #### 安装出现的囧事
 我的电脑竟然无法读取我的u盘内容，我原先一直以为是我自己制作过程发生了什么错误。然后我向同事借了一个U盘，同样用UUI制作，电脑可以读取（感谢同事给的U盘，用自己的两个U盘没有反馈），但是出现这样的错误（为什么我的U盘就不行呢？）：
 >**Boot failure : No DEFAULT or UI configuration directive found!**
 
 有信息就是好事，顺着这个信息很快找到了[解决方法][2]：
->我试了里面的几种方法，最后将U盘格式话为FAT后才成功安装。
+>我试了里面的几种方法，最后将U盘格式化为FAT后才成功安装。
 >来自[Richad的答案](http://askubuntu.com/questions/329704/syslinux-no-default-or-ui-configuration-directive-found#412853)：
 >**It seems for everyone it has a different solution, for me, the solution was to format my Flash drive with the FAT filesystem and make a boot drive with the Universal USB installer and voila, worked like a charm.**
 
