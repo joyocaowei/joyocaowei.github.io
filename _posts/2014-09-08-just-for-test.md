@@ -10,6 +10,9 @@ categories: programming
 
 You can render *LaTeX* mathematical expressions using **MathJax**, as on [math.stackexchange.com](http://math.stackexchange.com/):
 
+用`\(`和`\)`括起来的是行内公式: \(E=mc^2\)
+用`$$`和`$$`括起的是行公式
+
 The *Gamma function* satisfying $$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$ is via the Euler integral
 
 $$
@@ -19,7 +22,7 @@ $$
 > **Tip:** Make sure you include **MathJax** into your publications to render mathematical expression properly. Your page/template should include something like this:
 
 ```js
-<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"> </script>
 ```
 
 $$
