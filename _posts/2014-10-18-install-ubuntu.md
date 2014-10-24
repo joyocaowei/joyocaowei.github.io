@@ -24,15 +24,18 @@ categories: life
 >**It seems for everyone it has a different solution, for me, the solution was to format my Flash drive with the FAT filesystem and make a boot drive with the Universal USB installer and voila, worked like a charm.**
 
 #### 体验效果
-先看我的机子配置（08年买的电脑，信息有限）：
+先说说我的分区情况，`/`给了40G，swap分区给了4G，其它的空间全部给`/home`
+
+然后我的机子配置是（08年买的电脑，信息有限）：
 ![七牛云](http://joyo-pic-1.qiniudn.com/ubuntu14.04_system_info.png)
 
-下面是电脑桌面：
+安装好后的电脑桌面：
 ![七牛云](http://joyo-pic-1.qiniudn.com/my_desktop.png)
 
 感觉老电脑都比较适合安装linux系统，还是比较流畅的。值得一提的是3D效果，还是很让人惊艳的。
 
-下面是compiz的配置图：
+使用compizconflg设置管理器配置3D效果(可以参考[Ubuntu 3D桌面教程](http://forum.ubuntu.org.cn/viewtopic.php?t=140531))：
+
 ![七牛云](http://joyo-pic-1.qiniudn.com/compiz_setting.png)
 
 [1]: http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/
