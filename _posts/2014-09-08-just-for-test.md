@@ -33,7 +33,7 @@ $$
 
 
 ### 测试代码高亮问题
->使用"{% highlight c linenos %}"和"{% endhighlight %}"包裹代码块的显示效果
+>使用"\{% highlight c linenos \%}"和"\{% endhighlight \%}"包裹代码块的显示效果
 
 {% highlight c linenos %}
 //insertion_sort.c  
