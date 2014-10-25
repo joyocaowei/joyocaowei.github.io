@@ -11,7 +11,7 @@ categories: programming
 You can render *LaTeX* mathematical expressions using **MathJax**, as on [math.stackexchange.com](http://math.stackexchange.com/):
 
 用`\(`和`\)`括起来的是行内公式: \\( E=mc^2 \\)
-这是另一个行内公式测试： $ E=mc^2 $
+这是另一个行内公式测试： $ E=mc^2 $ **"没有效果"**
 用`$$`和`$$`括起的是行公式
 
 The *Gamma function* satisfying $$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$ is via the Euler integral
@@ -33,8 +33,8 @@ $$
 
 
 ### 测试代码高亮问题
-
-```C
+使用`{% highlight c linenos %}`和`{% endhighlight %}`包裹代码块的显示效果
+{% highlight c linenos %}
 //insertion_sort.c  
 //插入排序使用了增量的方法：在排序子数组A[0..i-1]后，将单个元素A[i]插入子数组的适当位置，产生排序好的子数组A[0..i]
   
@@ -64,7 +64,7 @@ int main()
     }  
     return 0;  
 }  
-```
+{% endhighlight %}
 
 ### 测试表格显示问题
 
