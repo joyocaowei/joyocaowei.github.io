@@ -13,7 +13,6 @@ redcarpet:
     - underline
     - lineanchors
 highlighter: pygments
-#pygments: true
 plugins: ./_plugins
 paginate: 6
 #safe: true
