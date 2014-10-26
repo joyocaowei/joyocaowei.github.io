@@ -68,7 +68,7 @@ int main()
 
 下面是另一段代码：
 
-``` java
+{% highlight java linenos %}
 import java.util.Scanner;
 public  class   ShortestPath
 {
@@ -94,7 +94,7 @@ public  class   ShortestPath
             }
     }
 }
-```
+{% endhighlight %}
 
 
 ### 测试表格显示问题
