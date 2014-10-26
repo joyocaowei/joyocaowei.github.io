@@ -110,7 +110,7 @@ a:hover {
     text-decoration: underline;
 }
 ::selection {
-    background: #F4F4F6;
+    background: A1C4B6;
     text-shadow: none;
 }
 .fn-clear:after {
@@ -622,7 +622,7 @@ float: left;
 .main-article h5 { font-size: 16px; margin-bottom: 20px; margin-top: 36px; }
 .main-article pre {
     margin: 30px 0px 30px 0px;
-    padding: 10px 15px;
+    padding: 10px 5px;
     background-color: #ffffcc;
     clear: both;
     overflow: auto;
