@@ -33,9 +33,8 @@ $$
 
 
 ### 测试代码高亮问题
->使用"\{% highlight c linenos %\}"和"\{% endhighlight %\}"包裹代码块的显示效果
 
-{% highlight c linenos=table %}
+{% highlight c lineanchors %}
 //insertion_sort.c  
 //插入排序使用了增量的方法：在排序子数组A[0..i-1]后，将单个元素A[i]插入子数组的适当位置，产生排序好的子数组A[0..i]
   
@@ -66,6 +65,37 @@ int main()
     return 0;  
 }  
 {% endhighlight %}
+
+下面是另一段代码：
+
+``` java
+import java.util.Scanner;
+public  class   ShortestPath
+{
+    public static void main(String args[]){
+         int iCase;
+         Scanner input=new Scanner(System.in);
+         System.out.println("请输入测试列数：");
+          
+         iCase=input.nextInt();
+        // System.out.println("输出列数"+iCase);
+         int  number;
+         for(number=1;number<iCase;number++)
+             {
+              int m,n;
+              m=input.nextInt();
+              n=input.nextInt();
+              System.out.println(number);
+              System.out.println(m*n);
+             if(m%2==1&&n%2==1)
+               System.out.println("41");
+             else
+               System.out.println("00");
+            }
+    }
+}
+```
+
 
 ### 测试表格显示问题
 

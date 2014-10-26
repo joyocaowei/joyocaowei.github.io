@@ -11,10 +11,11 @@ redcarpet:
     - with_toc_data
     - tables
     - underline
+    - lineanchors
 highlighter: pygments
 #pygments: true
 plugins: ./_plugins
-paginate: 8
+paginate: 6
 #safe: true
 safe: false
 
@@ -55,19 +56,19 @@ headimg:
 #关注我
 follow:
 #  - class: fa-google-plus
-#    url: http://www.zhanxin.info
+#    url: 
 #  - class: fa-facebook
-#    url: http://www.zhanxin.info
+#    url: 
   - class: fa-github
     url: http://github.com/joyocaowei
   - class: fa-weibo
     url: http://weibo.com/1710716145
 #  - class: fa-renren
-#    url: http://www.zhanxin.info
+#    url: 
 #  - class: fa-pinterest
-#    url: http://www.zhanxin.info
+#    url:
 #  - class: fa-twitter
-#    url: http://www.zhanxin.info
+#    url:
   - class: fa-rss
     url: /atom.xml
 
@@ -76,7 +77,6 @@ author:
   name: joyocaowei
   email: joyocaowei@gmail.com
   link: http://joyocaowei.github.io/contact.html
-  img: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
 
 #评论信息
 duoshuo:
