@@ -26,10 +26,9 @@ categories: programming
 perl -MPOSIX -le 'print strftime "%Y-%m-%d", localtime(time - 3600*24*5)'
 
 # 你也可以使用TimeZone的写法, EST是时区, 120=24*5
-# 这是在SunOS系统下的用法
 5DaysBefore=`TZ="EST+120" date +'%Y-%m-%d'`
 
-# 这是在GNU date下的写法
+# 这是在GNU date下的写法(无法在SunOS下使用)
 date +%Y-%m-%d -d '5 days ago'
 ```
 
