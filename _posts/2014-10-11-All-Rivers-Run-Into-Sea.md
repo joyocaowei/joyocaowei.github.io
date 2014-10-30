@@ -19,6 +19,18 @@ categories: programming
 **More**
 [Linux下删除名字乱码的文件](http://2922055.blog.51cto.com/2912055/999606)
 
+##### SunOS上获取5天前的日期
 
+``` bash
+# 获得五天以前的日期, 假设今天是20141030, 那么将得到20141025
+perl -MPOSIX -le 'print strftime "%Y-%m-%d", localtime(time - 3600*24*5)'
 
-*未完待续……*
+# 你也可以使用TimeZone的写法, EST是时区, 120=24*5
+# 这是在SunOS系统下的用法
+5DaysBefore=`TZ="EST+120" date +'%Y-%m-%d'`
+
+# 这是在GNU date下的写法
+date +%Y-%m-%d -d '5 days ago'
+```
+
+*未完待续…… 最后更新 2014/10/30*
