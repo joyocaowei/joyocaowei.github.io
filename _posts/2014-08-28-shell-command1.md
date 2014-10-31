@@ -139,7 +139,7 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 
 #### 一些命令行
 `cat file1 file2 | sort | uniq -d`
->两个文件的交集
+>两个文件的交集, 不过要确保file1和file2没有重复行，这样得出的才是真的交集
 
 `sort -t"|" +3 -4 +2 -3 +5 -6n file `
 >对多个字段进行排序
@@ -165,6 +165,11 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 set -- a b c
 echo "${1}0${2}0${3}0"
 ```
+
+`$(<input)`
+>remove all trailing newlines from the command inside them
+>比如说你有一个一列数的文件file, 你要变为一行, 可以使用`echo $(<file)`, 也可以使用`cat file | xargs`
+>当然这样出现的一行数是以默认的IFS(默认是空格)分隔的
 
 #### 学习
 [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)
