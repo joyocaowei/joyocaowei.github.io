@@ -7,14 +7,15 @@ categories: programming
 ---
 
 ####  tee - replicate the standard output
+
 ```
 pwd | tee pwd.txt | ls | cat -n
 ```
- >1  test.txt
- >2  pwd.txt
-
- pwd.txt的内容就是执行pwd的结果：
- >/home/caowei/code
+>1  test.txt
+>2  pwd.txt
+ 
+pwd.txt的内容就是执行pwd的结果：
+>/home/caowei/code
 
 #### sleep.sh
 ``` bash
@@ -106,8 +107,9 @@ EOF`
 `echo $number%2 | bc`
 >**可以用来判断奇偶数**
 
-`echo "scale=5;e(1)" | bc -l` **具体的函数可以参考手册 man bc**
+`echo "scale=5;e(1)" | bc -l`
 >result: 2.71828
+>**具体的函数可以参考手册 man bc**
 
 `echo "scale=2;34/3" | bc`
 >result: 11.33
@@ -153,7 +155,9 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 >去除文件的重复行，在某些系统上可能要使用nawk
 
 `sed -n '1p' filename`
->输出文件的第一行内容
+>输出文件的第一行内容, 适用于处理小型文件
+>如果要处理较大的文件(上百或者上千万行), 使用`sed -n '1p;1q' fielname`
+>这条命令将只输出第一行，同时退出程序。
 
 `set`
 >`set` 命令除了设置环境变量之外，还会将其他在 `shell` 内的变量通通显示出来，比如使用 `set | more` 查看.
@@ -170,6 +174,9 @@ echo "${1}0${2}0${3}0"
 >remove all trailing newlines from the command inside them
 >比如说你有一个一列数的文件file, 你要变为一行, 可以使用`echo $(<file)`, 也可以使用`cat file | xargs`
 >当然这样出现的一行数是以默认的IFS(默认是空格)分隔的
+
+#### Reference
+[关于shell脚本编程的10个最佳实践](http://blog.jobbole.com/16604/)
 
 #### 学习
 [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)
