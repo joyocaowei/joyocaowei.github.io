@@ -1,7 +1,7 @@
 ---
 title: bash终端快捷键和个性化提示
 layout: post
-description: 一些经常使用的终端快捷键和.bashrc PS1 generator
+description: 一些经常使用的终端快捷键和.bashrc PS1 generator, 另外补一些好用的省时技巧
 keywords: bash
 categories: configuration
 ---
@@ -13,6 +13,8 @@ categories: configuration
 `Ctrl+e` 移动到行尾
 
 `Ctrl+r` 向后搜索历史命令（使用`Ctrl+g`退出搜索）
+
+`Ctrl+_` undo
 
 `Ctrl+h` 退格删除一个字符，相当于`Backspace`键
 
@@ -76,6 +78,12 @@ export PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\
 
 **`\$`** ：提示字符，如果是root时，提示符为：# ，普通用户则为：$
 
+#### 好用的省时技巧
+
+**`cd -`** : 返回前一个工作路径
+**`pstree -p`** : 可以很方便的显示整个进程树。
+**`nohup`** 或者 **`disown`** : 让一个进程在后台一直运行
+
 #### More Resources
 
 [终端快捷键列表](http://tuhaihe.com/2013/06/20/bash-shortcuts.html)
@@ -83,3 +91,10 @@ export PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\
 [PS1 generator](http://bashrcgenerator.com/)
 
 [Bash Manual - command line editing](https://www.gnu.org/software/bash/manual/bashref.html#Command-Line-Editing)
+
+[那些应该知道的linux命令行省时技巧 - 原文](http://www.quora.com/What-are-some-time-saving-tips-that-every-Linux-user-should-know)
+
+[那些应该知道的linux命令行省时技巧 - 翻译版](http://blog.jobbole.com/54425/)
+
+
+*最后更新: 2014/11/02*
