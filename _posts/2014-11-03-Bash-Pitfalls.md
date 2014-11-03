@@ -7,7 +7,8 @@ categories: programming
 ---
 
 #### for i in $(ls *.mp3)
-常见的错误代码如下：
+常见的错误代码如下:
+
 ``` bash
 for i in $(ls *.mp3); do    # Wrong!
   some command $i           # Wrong!
@@ -20,7 +21,9 @@ for i in `find . -type f`   # Wrong!
 
 for i in "$(ls *.mp3)"; do  # Wrong!
 ```
+
 如果文件中有空格或者通配符的话，就会出现问题。一种较好的形式是：
+
 ``` bash
 for i in $somedir/*.mp3; do
   # 第三行代码的作用是万一文件不存在不会出现"$somedir/*.mp3"
@@ -39,6 +42,7 @@ done
 
 #### 不要使用[[ $foo > 7 ]]进行比较
 If you just want to do a numeric comparison (or any other shell arithmetic), it is much better to just use (( )) instead:
+
 ``` bash
 # Bash / Ksh
 ((foo > 7))        # Right!
@@ -48,6 +52,7 @@ If you just want to do a numeric comparison (or any other shell arithmetic), it 
 #### if [grep foo myfile]
 其实`[]`是test命令，但是很多人认为if后面的命令就是这么写的。
 真正的if语法是这样的：
+
 ``` bash
 if COMMANDS; then
   COMMANDS
@@ -57,7 +62,9 @@ else
   COMMANDS
 fi
 ```
+
 所以使用方式是：
+
 ```
 # 你可以这么用，使用test语法[[ somecode ]]
 if [[ -n "${my_var}" ]]; then
@@ -69,6 +76,7 @@ if grep foo myfile >/dev/null 2>&1; then
   some commands
 fi
 ```
+
 If the grep matches a line from myfile, then the exit code will be 0 (true), and the then part will be executed. Otherwise, if there is no matching line, the grep should return a non-zero exit code.
 
 #### 关于read命令
@@ -88,6 +96,7 @@ IFS=${OldIFS}
 ```
 
 #### 更改文件的内容
+
 ```
 # Don't do this
 cat file | sed s/foo/bar/ > file  # Wrong!
@@ -103,6 +112,7 @@ perl -pi -e 's/foo/bar/g' file(s)  # Also good too
 ```
 
 #### 小心使用`echo $msg`
+
 ``` bash
 $ ls *.awk
 histans1.awk  test.awk
@@ -113,6 +123,7 @@ Please enter a file name of the form histans1.awk test.awk
 $ echo "$msg"    # Right
 Please enter a file name of the form *.awk
 ```
+
 所以你在使用echo输出变量信息时要注意加上引号，另一种安全的写法是：
 `printf "%s\n" "$msg"`
 
@@ -130,10 +141,10 @@ Please enter a file name of the form *.awk
 >stderr(标准错误) - 2
 
 #### Reference
-1. [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
+[Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
 
-2. [Shell Style Guide](https://google-styleguide.googlecode.com/svn/trunk/shell.xml)
+[Shell Style Guide](https://google-styleguide.googlecode.com/svn/trunk/shell.xml)
 
-3. [redirection tutorial](http://wiki.bash-hackers.org/howto/redirection_tutorial "里面还有FD和exec的描述")
+[redirection tutorial](http://wiki.bash-hackers.org/howto/redirection_tutorial "里面还有FD和exec的描述")
 
-4. [Bash Hackers Wiki Frontpage](http://wiki.bash-hackers.org/start)
+[Bash Hackers Wiki Frontpage](http://wiki.bash-hackers.org/start)
