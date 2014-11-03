@@ -65,7 +65,7 @@ fi
 
 所以使用方式是：
 
-```
+``` bash
 # 你可以这么用，使用test语法[[ somecode ]]
 if [[ -n "${my_var}" ]]; then
   do_something
@@ -81,7 +81,7 @@ If the grep matches a line from myfile, then the exit code will be 0 (true), and
 
 #### 关于read命令
 
-```
+``` bash
 #!/bin/bash
 # IFS的默认值为空白符(换行符, 制表符或者空格)
 # 如果是其它分隔符，要设置IFS以读取字段
@@ -97,7 +97,7 @@ IFS=${OldIFS}
 
 #### 更改文件的内容
 
-```
+``` bash
 # Don't do this
 cat file | sed s/foo/bar/ > file  # Wrong!
 
