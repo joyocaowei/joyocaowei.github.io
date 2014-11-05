@@ -76,10 +76,8 @@ EOF`
 
 #### find及其组合命令
 - Finding the 10 largest size files from a given directory
-
 `find . -type f -exec du -k {} \; | sort -nrk 1 | head`
-
- >{}是一个特殊的字符串，与-exec结合使用。对于每一个匹配的文件，{}都会被替换成相应的文件名。
+>{}是一个特殊的字符串，与-exec结合使用。对于每一个匹配的文件，{}都会被替换成相应的文件名。
 
 - 清空当前目录下所有文件的内容，但不删除文件
 `find . -type f -exec cp /dev/null {} \;`
@@ -156,23 +154,29 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 
 `sed -n '1p' filename`
 >输出文件的第一行内容, 适用于处理小型文件
->如果要处理较大的文件(上百或者上千万行), 使用`sed -n '1p;1q' fielname`
+>如果要处理较大的文件(上百或者上千万行), 使用 `sed -n '1p;1q' fielname`
 >这条命令将只输出第一行，同时退出程序。
 
 `set`
 >`set` 命令除了设置环境变量之外，还会将其他在 `shell` 内的变量通通显示出来，比如使用 `set | more` 查看.
 
-```
+``` bash
 # one example for set
 # Braces avoiding confusion:
 # Output is "a0b0c0"
 set -- a b c
 echo "${1}0${2}0${3}0"
+
+# another example for debugging
+# Tag a part of a shell script to output debugging information (-x)
+set -x # on
+  some commands
+set +x # off
 ```
 
 `$(<input)`
 >remove all trailing newlines from the command inside them
->比如说你有一个一列数的文件file, 你要变为一行, 可以使用`echo $(<file)`, 也可以使用`cat file | xargs`
+>比如说你有一个一列数的文件file, 你要变为一行, 可以使用 `echo $(<file)`, 也可以使用 `cat file | xargs`
 >当然这样出现的一行数是以默认的IFS(默认是空格)分隔的
 
 #### Reference
