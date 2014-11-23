@@ -6,6 +6,20 @@ keywords: bash, linux
 categories: programming
 ---
 
+#### 单引号和双引号
+
+`str='this is a str'`
+
+- 单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的
+- 单引号字串中不能出现单引号（对单引号使用转义符后也不行）
+
+``` bash
+hidden='A Deep Web'
+str="Hello, I know it is \"$your_name\"! \n"
+```
+- 双引号里可以有变量
+- 双引号里可以出现转义字符
+
 #### for i in $(ls *.mp3)
 常见的错误代码如下:
 
