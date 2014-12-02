@@ -20,6 +20,8 @@ pwd.txt的内容就是执行pwd的结果：
 #### sleep.sh
 ``` bash
 #!/bin/bash
+# First line of the script is shebang which tells the system how to execute
+# the script: http://en.wikipedia.org/wiki/Shebang_(Unix)
 #Filename: sleep.sh
 echo -n Count:
  tput sc # 存储光标位置
