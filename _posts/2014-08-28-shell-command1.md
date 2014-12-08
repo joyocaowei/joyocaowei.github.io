@@ -180,6 +180,8 @@ set +x # off
 >remove all trailing newlines from the command inside them
 >比如说你有一个一列数的文件file, 你要变为一行, 可以使用 `echo $(<file)`, 也可以使用 `cat file | xargs`
 >当然这样出现的一行数是以默认的IFS(默认是空格)分隔的
+>介绍一下`$()`, Commands can be substituted within other commands using $( )
+>$(ls | wc -l)和\`ls | wc -l\`的效果一样, 最好使用$()
 
 #### Reference
 [关于shell脚本编程的10个最佳实践](http://blog.jobbole.com/16604/)
