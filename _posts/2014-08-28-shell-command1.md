@@ -158,6 +158,7 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 >输出文件的第一行内容, 适用于处理小型文件
 >如果要处理较大的文件(上百或者上千万行), 使用 `sed -n '1p;1q' fielname`
 >这条命令将只输出第一行，同时退出程序。
+>如果要输出一个范围的行数(比如输出第三刀第九行内容)，可以使用`sed -n '3,9p' filename`
 
 `set`
 >`set` 命令除了设置环境变量之外，还会将其他在 `shell` 内的变量通通显示出来，比如使用 `set | more` 查看.
