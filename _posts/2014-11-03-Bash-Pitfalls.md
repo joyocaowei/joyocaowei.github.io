@@ -51,8 +51,8 @@ done
 因为文件中有空格(space)或者通配符(wildcards)就有问题了。
 
 #### [ $foo = "bar" ]
-正确的写法是：
-`[[ $foo = "bar" ]]` 或者 `[[ $foo == "bar" ]]` 或者 `[ "bar" = "$foo" ]`
+更好的写法是：
+`[[ $foo = "bar" ]]` 或者 `[[ $foo == "bar" ]]`
 
 #### 不要使用[[ $foo > 7 ]]进行比较
 If you just want to do a numeric comparison (or any other shell arithmetic), it is much better to just use (( )) instead:
@@ -153,6 +153,15 @@ Please enter a file name of the form *.awk
 >stdin(标准输入) - 0
 >stdout(标准输出) - 1
 >stderr(标准错误) - 2
+
+#### Use of Shell Builtin Commands
+If possible shell buitins should be preferred to external utilities. Each call of sed, awk, cut etc. generates a new process. Used in a loop this can extend the execution time considerably. In the following example the shell parameter expansion is used to get the base name and the directory of a path:
+``` bash
+for pathname in $(find $search - type f -name "*"); do
+  basename=${pathname##*/}    # replaces basename(1)
+  dirname=${pathname%/*}      # replaces dirname(1)
+done
+```
 
 #### Reference
 [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
