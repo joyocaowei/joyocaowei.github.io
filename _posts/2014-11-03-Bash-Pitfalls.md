@@ -156,6 +156,7 @@ Please enter a file name of the form *.awk
 
 #### Use of Shell Builtin Commands
 If possible shell buitins should be preferred to external utilities. Each call of sed, awk, cut etc. generates a new process. Used in a loop this can extend the execution time considerably. In the following example the shell parameter expansion is used to get the base name and the directory of a path:
+
 ``` bash
 for pathname in $(find $search - type f -name "*"); do
   basename=${pathname##*/}    # replaces basename(1)
