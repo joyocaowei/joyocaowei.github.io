@@ -150,6 +150,7 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 `+2 -3` 同上，对第三个关键字进行排序
 `+5 -6n` 对第六列进行数据排序
 最后的内容相当于第四列作为第一优先级排序，之后是第三列，最后是第六列。
+也可以使用`sort -t"|" -k4,4 -k3,3 -k6,6n`
 
 `awk '!a[$0]++' filename`
 >去除文件的重复行，在某些系统上可能要使用nawk
