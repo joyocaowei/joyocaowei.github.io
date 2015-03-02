@@ -188,6 +188,7 @@ set +x # off
 
 #### Reference
 [关于shell脚本编程的10个最佳实践](http://blog.jobbole.com/16604/)
+
 [shell中数学计算](http://www.cnblogs.com/shapherd/archive/2012/12/21/2827733.html)
 
 #### 学习
