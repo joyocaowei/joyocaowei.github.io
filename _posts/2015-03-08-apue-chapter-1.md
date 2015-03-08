@@ -1,7 +1,7 @@
 ---
 layout: post
 title: APUE读书笔记 - UNIX System Overview
-description: APU第一章的读书笔记
+description: APUE第一章的读书笔记
 keywords: linux
 categories: programming
 ---
@@ -45,7 +45,8 @@ int main(int argc, char *argv[]){
 >export C_INCLUDE_PATH=\$HOME/codes/apue.3e/include/
 >export LIBRARY_PATH=\$HOME/codes/apue.3e/lib/
 之后就可以使用`gcc -o myls myls.c -lapue`来编译了。
-其实也可以直接写入文件`.bashrc`或者写入一个名为**apue.ini**的配置文件，使用sourc命令`. apue.ini`把变量加载到shell中也可。
+其实也可以直接写入文件`~/.bashrc`或者写入一个名为**apue.ini**的配置文件。
+并使用sourc命令`. apue.ini`把变量加载到shell中。
 
 #### 进程和线程
 程序的执行实例被称为进程(*process*), unix系统确保每个进程都有一个唯一的数字标示符，称为进程ID(*process ID*);
