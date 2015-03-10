@@ -1,12 +1,15 @@
 ---
 title: 基本的shell命令使用
 layout: post
-description: shell的一些简单使用
+description: 部分shell命令的简单使用
 keywords: linux, shell
 categories: programming
 ---
 
 ####  tee - replicate the standard output
+
+所谓 tee 命令是在不影响原本 I/O 的情况下, 将 stdout 复制一份到文档中去。
+一般放在管道中使用: cmd1 | cmd2 | tee [-a] file | cmd3
 
 ```
 pwd | tee pwd.txt | ls | cat -n
