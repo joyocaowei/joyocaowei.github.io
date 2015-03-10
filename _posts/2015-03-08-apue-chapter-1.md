@@ -87,6 +87,15 @@ int main(void){
 }
 ```
 
+#### 用户标识
+
+用户ID，组ID（组文件将组名映射位数值的组ID，组文件通常是/etc/group）。
+`ls -l` 命令使用口令文件将数值的用户ID映射位登录名，从而打印出文件所有者的登录名。
+关于 `ls -l` 的各个列的意思需要明白。
+>In addition to the name of each file, print the file type, file mode bits, number of hard links, owner name, group name, size, and timestamp (*note Formatting file timestamps::), normally the modification time.
+
+**更多的信息可以查看 `info ls`**
+
 #### 信号，时间值
 信号(signal)用于通知进程发生了某种情况。进程的三种处理信号的方式：
 >忽略信号。
