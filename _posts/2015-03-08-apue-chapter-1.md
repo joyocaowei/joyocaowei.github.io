@@ -42,8 +42,8 @@ int main(int argc, char *argv[]){
 > **-lapue**: 说要在lib中找include下apue文件对应的libapue.a或者libapue.so，就是找到编译过apue.h中的函数。
 
 但是这样做命令行有点长, 可以把[gcc环境变量](http://gcc.gnu.org/onlinedocs/gcc/Environment-Variables.html)导入进来：
->export C_INCLUDE_PATH=\$HOME/codes/apue.3e/include/
->export LIBRARY_PATH=\$HOME/codes/apue.3e/lib/
+>export C_INCLUDE_PATH=/$HOME/codes/apue.3e/include/
+>export LIBRARY_PATH=/$HOME/codes/apue.3e/lib/
 之后就可以使用`gcc -o myls myls.c -lapue`来编译了。
 其实也可以直接写入文件`~/.bashrc`或者写入一个名为**apue.ini**的配置文件。
 并使用sourc命令`. apue.ini`把变量加载到shell中。
