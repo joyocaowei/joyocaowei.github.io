@@ -14,6 +14,7 @@ categories: programming
 
 #### open
 使用open函数可以打开或者创建一个文件.
+
 ``` c
 #include <fcntl.h>
 #include <sys/stat.h>
@@ -45,13 +46,15 @@ int main(void) {
     return 0;
 }
 ```
+
 编译之后,第一次执行会创建test.txt文件, 第二次运行会报错: open fail cause file already exists.
 
 由open函数返回的文件描述符一定是最小的未被使用的描述符数值. 上例中是3.
 
 #### close
 关闭一个文件还会释放该进程加在该文件上的所有记录锁. 当一个进程终止时,内核自动关闭它所有打开的文件. 很多程序都利用了这一点而不显式的用close关闭打开的文件, 比如使用exit(0).
-```
+
+``` c
 #include <stdlib.h>
 void exit(int status);
 ```
@@ -63,6 +66,7 @@ void exit(int status);
 #include <unistd.h>
 off_t lseek(int fd, off_t offset, int whence);
 ```
+
 >若whence是SEEK_SET, 则将该文件的偏移量设置为距离文件开始处offset个字节.
 >若whence是SEEK_CUR, 则将该文件的偏移量设置为当前位置加offset(可正可负).
 >若whence是SEEK_END, 则将该文件的偏移量设置为文件长度加offset(可正可负).
@@ -82,6 +86,7 @@ int main(void){
     exit(0);
 }
 ```
+
 > $ ./seek2 < setfl.c  
 seek OK
 $ cat Makefile | ./seek2  
@@ -183,6 +188,7 @@ UNIX系统支持在不同的进程间共享打开文件, 内核使用3种数据�
 - 如果使用了O_APPEND标志打开一个文件,则相应标志也被设置到文件表项的文件状态标志中. **每次对这种具有追加写标志的文件执行写操作时, 文件表项中的当前文件偏移量首先会被设置为i节点表项中的文件长度. 这就使得每次写入的数据都追加到当前文件的末尾.**(构成一个原子操作)  
  
  > 一般而言,原子操作(automic operation)指的是由多步组成的一个操作. 如果该操作原子地执行, 要么执行完所有的步骤, 要么一步也不执行, 不可能只执行所有步骤的一个子集.
+
 - 若一个文件用lseek定位到文件的末尾, 则文件表项中的当前文件偏移量被设置为i节点表项中的当前文件长度.
 - lseek函数只修改文件表项中的当前偏移量, 不进行任何I/O操作.
 
