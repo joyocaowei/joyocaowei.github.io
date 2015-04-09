@@ -19,17 +19,41 @@ categories: programming
 **More**
 [Linux下删除名字乱码的文件](http://2922055.blog.51cto.com/2912055/999606)
 
-##### SunOS上获取5天前的日期
+##### SunOS上获取以前的日期
 
 ``` bash
 # 获得五天以前的日期, 假设今天是20141030, 那么将得到20141025
 perl -MPOSIX -le 'print strftime "%Y-%m-%d", localtime(time - 3600*24*5)'
 
 # 你也可以使用TimeZone的写法, EST是时区, 120=24*5
-5DaysBefore=`TZ="EST+120" date +'%Y-%m-%d'`
+5DaysBefore=`TZ="EST125EDT" date +'%Y-%m-%d'`
 
 # 这是在GNU date下的写法(无法在SunOS下使用)
 date +%Y-%m-%d -d '5 days ago'
 ```
 
-*未完待续…… 最后更新 2014/10/30*
+>During a session, sometimes we have a need to change the system time for our session only. We have used it to simulate time based testing.
+
+>Format `TZ=ESThhEDT`
+
+>The EST set your time to Eastern Standard Time and EDT is Eastern Daylight Time.
+
+>hh is the number of hours you wish to change.
+
+>Example: Currently the system(`date`)
+date is `Thu Apr  9 02:31:10 EDT 2015`
+
+>And you wish to set it to yesterday at the same time. You would substitute a positive 29 for hh.
+
+>Now the shell time is(`TZ=EST29EDT date`):
+`Wed Apr  8 02:31:14 EDT 2015`
+
+>Why 29 and not 24? The main UNIX clock is set from GMT not EST therefore you have to add 5 hours to your backward calculations to get the same exact time since EST is GMT - 5 hours. 
+
+>Use negitive numbers to set the clock into the future. 
+
+>Also if you need to set the minutes and seconds it is hh:mm:ss. These are all the number of hours, minutes and seconds from GMT that you wish to set. 
+This is for Solaris 10.
+
+
+*未完待续…… 最后更新 2015/04/09*
