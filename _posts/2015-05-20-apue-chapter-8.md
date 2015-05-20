@@ -1,3 +1,11 @@
+---
+layout: post
+title: APUE_3E - Process Control
+description: APUE 第八章的记录笔记
+keywords: linux
+categories: programming
+---
+
 fork可以创建新进程, exec可以初始执行新的程序. exit函数和wait函数处理终止和等待终止. 这些是基本的进程控制原语.
 
 ### 进程标识
