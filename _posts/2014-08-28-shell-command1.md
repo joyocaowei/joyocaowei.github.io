@@ -146,6 +146,8 @@ mailx -s “Reports” user@my.somewhere.com < /tmp/out.mail
 `cat file1 file2 | sort | uniq -d`
 >两个文件的交集, 不过要确保file1和file2没有重复行，这样得出的才是真的交集
 
+`cat a b b | sort | uniq -u > c   # c is set difference a - b`
+
 `sort -t"|" +3 -4 +2 -3 +5 -6n file `
 >对多个字段进行排序
 `-t"|"` 对文件以 | 作为分列符号
