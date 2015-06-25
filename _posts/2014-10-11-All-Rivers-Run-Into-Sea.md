@@ -55,5 +55,6 @@ date is `Thu Apr  9 02:31:10 EDT 2015`
 >Also if you need to set the minutes and seconds it is hh:mm:ss. These are all the number of hours, minutes and seconds from GMT that you wish to set. 
 This is for Solaris 10.
 
+如果要显示各个时区的时间, 可以使用诸如`TZ=PRC date`命令(显示中国北京时间). 有很多时区可以选择, 可以进入目录**/usr/share/lib/zoneinfo**查看.
 
-*未完待续…… 最后更新 2015/04/09*
+*未完待续…… 最后更新 2015/06/25*
