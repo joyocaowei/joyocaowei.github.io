@@ -33,6 +33,7 @@ void (*signal(int signo, void (*func)(int)))(int);
 **当指定函数地址时, 则在信号发生时, 调用该函数, 我们称这种处理为捕捉该信号(signal handler)**.
 
 可以将signal函数原型写成如下格式(之后的例子都用如下定义代替):
+
 ``` c
 typedef void Sigfunc(int);
 Sigfunc *signal(int, Sigfunc *);
@@ -145,6 +146,7 @@ int sigprocmask(int how, const sigset_t *restrict set, sigset_t *restrict oset);
 
 首先, 若*oset*是非空指针, 那么进程的当前信号屏蔽字通过*oset*返回.
 其次, 若*set*是一个非空指针, 则参数*how*指示如何修改当前屏蔽字.
+
 |*how*|description|
 |:-----:|:-----:|
 |SIG_BLOCK|The new signal mask for the process is the union of its current signal mask and the signal set pointed to by set. That is, set contains the additional signals that we want to block.|
