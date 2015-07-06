@@ -164,6 +164,16 @@ for pathname in $(find $search - type f -name "*"); do
 done
 ```
 
+``` bash
+name="File.sh"
+
+echo "${name:-other}" # File.sh
+echo "${nonvar:-incorrect}" # 变量nonvar不存在, 输出incorrect
+echo "name变量的长度: ${#name}" # 7
+
+echo "${name: -2}" # 取变量的最后两个字符(sh), 注意:和-之间的空格
+```
+
 #### Reference
 [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
 
