@@ -1,6 +1,6 @@
 ---
 layout: post
-title: APUE_3E - Files and Directiries
+title: APUE_3E - Files and Directories
 description: APUE第四章 - 文件和目录的简单摘要
 keywords: linux
 categories: programming
