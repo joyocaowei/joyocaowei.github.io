@@ -79,7 +79,7 @@ sqlresult=`$ORACLE_HOME/bin/sqlplus -s << EOF
 EOF`
 ```
 
-#### find及其组合命令
+#### [find及其组合命令](http://www.gnu.org/software/findutils/manual/html_mono/find.html)
 - Finding the 10 largest size files from a given directory
 `find . -type f -exec du -k {} \; | sort -nrk 1 | head`
 >{}是一个特殊的字符串，与-exec结合使用。对于每一个匹配的文件，{}都会被替换成相应的文件名。
@@ -89,6 +89,12 @@ EOF`
 
 - 统计当前目录中所有txt文件的行数
 `find . -type f -name "*.txt" | xargs wc -l`
+
+- 找出大于某个值或者小于某个值的文件
+`find . -type f -name "*.txt" +size 100k`
+>**+n** for greater than n,
+>**-n** for less than n,
+>**n** for exactly n.
 
 - 查找当前目录及其子目录下包括`About`字符的文件
 `find . -type f | xargs grep -n About`
@@ -200,5 +206,3 @@ set +x # off
 [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)
 
 [The Linux Programming Interface](http://man7.org/tlpi/)
-
-[The AWK Programming Language](http://plan9.bell-labs.com/cm/cs/awkbook/)
