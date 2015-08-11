@@ -132,10 +132,11 @@ Cc: C@XXXXXX.com
 Subject: Test E-mail
 >
 >This is a test e-mail
-.
 
 **then run command:**
 `sendmail -t < test.txt`
+If you want to [add attchment](http://www.unix.com/aix/36448-command-line-script-send-e-mail-html-body-binary-attachment.html), you can do it like below:
+`uuencode attachment.txt attachment.txt >> test.txt | sendmail -t < test.txt`
 
 ##### 方法二
 `(cat mail.txt; uuencode $1 $1) | mailx -s "$subject" $address`
