@@ -46,6 +46,7 @@ echo -n Count:
 #### FTP
 
 ``` bash
+# FTP example
 # "-n" - Restrains ftp from attempting "auto-login" upon initial connection.
 # "-i" - Turns off interactive prompting during multiple file transfers.
 # "-v" - Verbose option forces ftp to show all responses from the remote server,
@@ -54,15 +55,23 @@ echo -n Count:
 HOST='domain.com'
 USER='foo'
 PASSWD='password'
-ftpresults=`ftp -niv << EOF
+ftpresults=$(ftp -niv << EOF
 open $HOST
 user $USER $PASSWD
 cd /done
 $getstr
 bye
-EOF`
+EOF)
 
 echo "FTP Results: $ftpresults"
+
+# SFTP example
+# The following is called a HERE document
+sftpresults=$(sftp <user>@<remote> << EOF 
+  put test.txt
+  ... # any commands you need to execute via sftp
+  quit
+EOF)
 ```
 
 #### sqlplus in bash
