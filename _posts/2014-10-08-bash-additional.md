@@ -22,6 +22,8 @@ categories: configuration
 
 `Ctrl+k` 从当前光标删除到行尾
 
+`alt+.` cycles through previous arguments
+
 `Ctrl+l` 清屏
 
 `Ctrl+f` 光标前移/一个字符
@@ -81,7 +83,7 @@ export PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\
 #### 好用的省时技巧
 
 **`cd -`** : 返回前一个工作路径
-**`pstree -p`** : 可以很方便的显示整个进程树。
+**`pstree -p`** : 可以很方便的显示整个进程树
 **`nohup`** 或者 **`disown`** : 让一个进程在后台一直运行
 
 #### More Resources
@@ -96,5 +98,6 @@ export PS1="\[\e[00;33m\]\s-\v\[\e[0m\]\[\e[00;37m\]@\h:\[\e[0m\]\[\e[00;36m\][\
 
 [那些应该知道的linux命令行省时技巧 - 翻译版](http://blog.jobbole.com/54425/)
 
+[The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
 
-*最后更新: 2014/11/02*
+*最后更新: 2015/09/08*
