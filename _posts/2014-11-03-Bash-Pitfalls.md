@@ -109,6 +109,18 @@ done < test
 IFS=${OldIFS}
 ```
 
+``` bash
+IFS=- read -ra parts <<< "foo-bar-baz"
+echo ${parts[0]}   # foo
+echo ${parts[2]}   # baz
+echo ${#parts}     # 3
+echo ${#parts[@]}  # 3
+echo ${parts[@]}   # foo bar baz
+```
+
+> `<<<` means **here string**
+> `-a` option告诉read命令将分割后的元素保存到parts数组中
+
 #### 更改文件的内容
 
 ``` bash
