@@ -96,7 +96,8 @@ If the grep matches a line from myfile, then the exit code will be 0 (true), and
 #### 关于read命令
 
 ``` bash
-#!/bin/bash
+#!/usr/bin/env bash
+# Above line is so called shebang
 # IFS的默认值为空白符(换行符, 制表符或者空格)
 # 如果是其它分隔符，要设置IFS以读取字段
 OldIFS=$IFS
